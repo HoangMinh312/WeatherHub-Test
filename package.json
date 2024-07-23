@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint-fix": "eslint . --fix",
     "format": "prettier --write .",
-    "lint-fix": "eslint . --fix"
+    "format-check": "prettier --check ."
   },
   "dependencies": {
     "@clerk/nextjs": "^5.2.4",
