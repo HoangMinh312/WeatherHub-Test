@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function GET() {
+export async function POST(req: Request) {
   try {
     // can replace with actual weather data with fetch api from weather api
     const weatherData = {
@@ -18,7 +18,7 @@ export async function GET() {
 
     const { data, error } = await resend.emails.send({
       from: 'WeatherHub <onboarding@resend.dev>',
-      to: ['s3977773@rmit.edu.vn'],
+      to: ['s3977773@rmit.edu.vn', 's3963286@rmit.edu.vn'],
       subject: 'WeatherHub Alert!',
       react: EmailTemplate({
         temperature: weatherData.temperature,
