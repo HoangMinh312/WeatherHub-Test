@@ -5,7 +5,6 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function GET() {
   try {
-
     // can replace with actual weather data with fetch api from weather api
     const weatherData = {
       temperature: 25,
