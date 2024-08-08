@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: Request) {
+export async function GET(req: Request) {
   try {
     // can replace with actual weather data with fetch api from weather api
     const weatherData = {
