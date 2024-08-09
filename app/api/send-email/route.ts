@@ -18,7 +18,7 @@ export async function GET(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: 'WeatherHub <onboarding@resend.dev>',
-      to: ['s3977773@rmit.edu.vn', 's3963286@rmit.edu.vn'],
+      to: ['s3977773@rmit.edu.vn'],
       subject: 'WeatherHub Alert!',
       react: EmailTemplate({
         temperature: weatherData.temperature,
